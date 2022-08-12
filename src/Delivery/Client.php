@@ -194,4 +194,100 @@ class Client extends BaseClient
     {
         return $this->sendRequest('post', 'peisong/order/rider/location/h5url', $params);
     }
+
+    /**
+     * 模拟接单
+     *
+     * @param array $params
+     * @return mixed
+     * @throws \Cblink\HyperfMeituan\Kernel\Exception\MeituanException
+     */
+    public function testArrange(array $params)
+    {
+        return $this->sendRequest('post', 'peisong/test/orderArrange', $params);
+    }
+
+    /**
+     * 模拟取货
+     *
+     * @param array $params
+     * @return mixed
+     * @throws \Cblink\HyperfMeituan\Kernel\Exception\MeituanException
+     */
+    public function testPickup(array $params)
+    {
+        return $this->sendRequest('post', 'peisong/test/orderPickup', $params);
+    }
+
+    /**
+     * 模拟送达
+     *
+     * @param array $params
+     * @return mixed
+     * @throws \Cblink\HyperfMeituan\Kernel\Exception\MeituanException
+     */
+    public function testOrderDeliver(array $params)
+    {
+        return $this->sendRequest('post', 'peisong/test/orderDeliver', $params);
+    }
+
+    /**
+     * 模拟改派
+     *
+     * @param array $params
+     * @return mixed
+     * @throws \Cblink\HyperfMeituan\Kernel\Exception\MeituanException
+     */
+    public function testOrderRearrange(array $params)
+    {
+        return $this->sendRequest('post', 'peisong/test/orderRearrange', $params);
+    }
+
+    /**
+     * 模拟骑手上传异常
+     *
+     * @param array $params
+     * @return mixed
+     * @throws \Cblink\HyperfMeituan\Kernel\Exception\MeituanException
+     */
+    public function orderReportException(array $params)
+    {
+        return $this->sendRequest('post', 'peisong/test/orderRearrange', $params);
+    }
+
+    /**
+     * 模拟门店状态回调测试
+     *
+     * @param array $params
+     * @return mixed
+     * @throws \Cblink\HyperfMeituan\Kernel\Exception\MeituanException
+     */
+    public function testShopStatusCallback(array $params)
+    {
+        return $this->sendRequest('post', 'peisong/test/shopStatusCallback', $params);
+    }
+
+    /**
+     * 模拟门店配送范围变更
+     *
+     * @param array $params
+     * @return mixed
+     * @throws \Cblink\HyperfMeituan\Kernel\Exception\MeituanException
+     */
+    public function testShopAreaCallback(array $params)
+    {
+        return $this->sendRequest('post', 'test/shop/area/callback', $params);
+    }
+
+    /**
+     * 模拟门店配送风险等级变更
+     *
+     * @param array $params
+     * @return mixed
+     * @throws \Cblink\HyperfMeituan\Kernel\Exception\MeituanException
+     */
+    public function testShopDeliveryRiskLevelCallback(array $params)
+    {
+        return $this->sendRequest('post', 'test/shop/deliveryRiskLevel/callback', $params);
+    }
 }

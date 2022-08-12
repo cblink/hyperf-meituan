@@ -14,10 +14,10 @@ class TestOrder extends TestCase
 
         $config = require 'testConfig.php';
         $developerId = $config['developerId'];
-        $sign = $config['sign'];
+        $secret = $config['secret'];
         $this->meituanApp = new \Cblink\HyperfMeituan\MeituanApp([
             'developerId' => $developerId,
-            'secret' => $sign,
+            'secret' => $secret,
         ]);
     }
 
