@@ -72,10 +72,10 @@ class BaseClient
             $data['appAuthToken'] = $this->config['auth_token'];
         }
 
-        $data['sign'] = $this->signature($data);
+        $data['sign'] = $this->getSign($data);
 
         $response = $this->$method($this->url($uri), $data, $this->getBaseOptions());
-var_dump($response);exit;
+
         if ($response['code'] != 'OP_SUCCESS') {
             throw new MeituanException($response['msg']);
         }
@@ -99,7 +99,7 @@ var_dump($response);exit;
      * @param $params
      * @return string
      */
-    public function signature(&$params)
+    public function getSign(&$params)
     {
         $sign = $this->config['sign'];
 
