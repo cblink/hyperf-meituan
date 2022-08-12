@@ -101,7 +101,7 @@ class BaseClient
      */
     public function getSign(&$params)
     {
-        $sign = $this->config['sign'];
+        $sign = $this->config['secret'];
 
         ksort($params);
 

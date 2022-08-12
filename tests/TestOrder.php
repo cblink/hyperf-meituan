@@ -17,7 +17,7 @@ class TestOrder extends TestCase
         $sign = $config['sign'];
         $this->meituanApp = new \Cblink\HyperfMeituan\MeituanApp([
             'developerId' => $developerId,
-            'sign' => $sign,
+            'secret' => $sign,
         ]);
     }
 
