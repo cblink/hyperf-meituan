@@ -77,7 +77,7 @@ class BaseClient
         $response = $this->$method($this->url($uri), $data, $this->getBaseOptions());
 
         if ($response['code'] != 'OP_SUCCESS') {
-            throw new MeituanException($response['msg'], $response['code']);
+            throw new MeituanException($response['msg'], -1);
         }
         return $response;
     }
