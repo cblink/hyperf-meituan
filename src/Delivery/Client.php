@@ -252,7 +252,7 @@ class Client extends BaseClient
      */
     public function orderReportException(array $params)
     {
-        return $this->sendRequest('post', 'peisong/test/orderRearrange', $params);
+        return $this->sendRequest('post', 'peisong/test/orderReportException', $params);
     }
 
     /**

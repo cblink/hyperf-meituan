@@ -51,19 +51,19 @@ class TestOrder extends TestCase
 
         $orders = [
             'shop_id' => 'test_0001',
-            'delivery_id' => '426477450942210049',
-            'order_id' => '636a3a7f824977a97251e3cf6799cde6',
+            'delivery_id' => '426489847044153345',
+            'order_id' => 'd210b63ea4f734f6db7b0611533b3eef',
             'outer_order_source_desc' => '202',
-            'delivery_service_code' => '100030',
+            'delivery_service_code' => '100031',
             'receiver_name' => 'test',
-            'receiver_address' => '广东省深圳市粤海街道办长虹科技大厦',
-            'receiver_phone' => '13900000000',
-            'receiver_lng' => 113957587,
-            'receiver_lat' => 22538122,
+            'receiver_address' => '广东省深圳南山区',
+            'receiver_phone' => '13944702732',
+            'receiver_lng' => 113948371,
+            'receiver_lat' => 22535699,
             'pay_type_code' => 0,
-            'goods_value' => '1.01',
-            'goods_weight' => 2,
-            'goods_detail' => json_encode(['goods' => $goods]),
+            'goods_value' => '2000.00',
+            'goods_weight' => 1,
+            'goods_detail' => '{"goods":[{"goodCount":10,"goodName":"20220218\u591a\u89c4\u683c\u7535\u5546\u5546\u54c1","goodPrice":100,"goodUnit":"\u4e2a","goodUnitCode":"10008"},{"goodCount":10,"goodName":"20220218\u591a\u89c4\u683c\u7535\u5546\u5546\u54c1","goodPrice":100,"goodUnit":"\u4e2a","goodUnitCode":"10008"}]}',
         ];
 
         $response = $this->meituanApp->delivery->preCreateByShop($orders);
