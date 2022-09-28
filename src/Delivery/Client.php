@@ -72,7 +72,7 @@ class Client extends BaseClient
      */
     public function location(array $params)
     {
-        return $this->sendRequest('post', 'peisong/order/location', $params);
+        return $this->sendRequest('post', 'peisong/order/rider/location', $params);
     }
 
     /**

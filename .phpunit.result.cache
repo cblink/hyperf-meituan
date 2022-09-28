@@ -1,1 +1,1 @@
-{"version":1,"defects":{"TestOrder::testSubmitOrder":4,"TestOrder::testOrderCheck":5,"TestOrder::testOrderByShop":5},"times":{"TestOrder::testSubmitOrder":1.177,"TestOrder::testOrderCheck":1.238,"TestOrder::testOrderByShop":1.284}}
+{"version":1,"defects":{"TestOrder::testSubmitOrder":4,"TestOrder::testOrderCheck":5,"TestOrder::testOrderByShop":5,"TestOrder::testGetOrder":5},"times":{"TestOrder::testSubmitOrder":1.177,"TestOrder::testOrderCheck":1.238,"TestOrder::testOrderByShop":1.196,"TestOrder::testGetOrder":0.597}}

@@ -51,8 +51,8 @@ class TestOrder extends TestCase
 
         $orders = [
             'shop_id' => 'test_0001',
-            'delivery_id' => '426489847044153345',
-            'order_id' => 'd210b63ea4f734f6db7b0611533b3eef',
+            'delivery_id' => '426489847044153346',
+            'order_id' => 'd210b63ea4f734f6db7b0611533b3eee',
             'outer_order_source_desc' => '202',
             'delivery_service_code' => '100031',
             'receiver_name' => 'test',
@@ -66,7 +66,17 @@ class TestOrder extends TestCase
             'goods_detail' => '{"goods":[{"goodCount":10,"goodName":"20220218\u591a\u89c4\u683c\u7535\u5546\u5546\u54c1","goodPrice":100,"goodUnit":"\u4e2a","goodUnitCode":"10008"},{"goodCount":10,"goodName":"20220218\u591a\u89c4\u683c\u7535\u5546\u5546\u54c1","goodPrice":100,"goodUnit":"\u4e2a","goodUnitCode":"10008"}]}',
         ];
 
-        $response = $this->meituanApp->delivery->preCreateByShop($orders);
+        $response = $this->meituanApp->delivery->createByShop($orders);
+
+        var_dump($response);
+    }
+
+    public function testGetOrder()
+    {
+        $response = $this->meituanApp->delivery->queryStatus([
+            'delivery_id' => '426489847044153346',
+            'mt_peisong_id' => '1664183046075001079'
+        ]);
 
         var_dump($response);
     }
